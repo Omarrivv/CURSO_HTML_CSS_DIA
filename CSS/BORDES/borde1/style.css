@@ -1,0 +1,35 @@
+/* div{
+    background: red;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    border-width: 3px;
+    border-color: rgb(3, 8, 69);
+    border-style: solid;
+    border: 3px solid rgb(3, 8, 69);
+    border-radius: 44px;
+}
+ */
+
+body{
+    background-color: black;
+}
+
+
+input{
+    margin: 5px;
+    padding: 6px 9px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid white;;
+    color: rgb(247, 255, 9);
+    font-size: 16px;
+    border-radius: 7px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen con Efectos Avanzados</title>
+    <style>
+        /* Contenedor de la imagen */
+        .image-container {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Efecto de borde animado tipo gusano */
+        .image-container::before {
+            content: "";
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            border-radius: 15px;
+            background: linear-gradient(45deg, #ff4d4d, #02024c, #033e16, #ff4d4d);
+            background-size: 400% 400%;
+            animation: borderAnimation 4s linear infinite;
+            z-index: 0;
+        }
+
+        /* Imagen */
+        .image-container img {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Texto dinámico centrado con efecto de brillo */
+        .dynamic-text {
+            position: absolute;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #e8e8e8, #131353, #dadca0);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            animation: colorChange 3s infinite, glow 2s ease-in-out infinite alternate;
+            z-index: 2;
+        }
+
+        /* Animación de carga */
+        .loading-animation {
+            position: absolute;
+            font-size: 18px;
+            color: #081139;
+            z-index: 3;
+        }
+
+        /* Animaciones de borde y texto */
+        @keyframes borderAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes colorChange {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #d8d0d0, 0 0 20px #ff4d4d, 0 0 30px #0e0e51; }
+            to { text-shadow: 0 0 20px #d7cece, 0 0 30px #ffffff, 0 0 40px #023312; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagen con Efectos y Eventos de Carga</h1>
+    <div class="image-container">
+        <!-- Texto de carga -->
+        <div class="loading-animation">Cargando imagen...</div>
+        
+        <!-- Imagen con evento de carga -->
+        <img id="mainImage" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg" alt="CR7">
+        
+        <!-- Texto dinámico que aparece después de la carga -->
+        <div class="dynamic-text" id="dynamicText">Cristiano Ronaldo en acción</div>
+    </div>
+
+    <script>
+        const image = document.getElementById('mainImage');
+        const dynamicText = document.getElementById('dynamicText');
+        const loadingAnimation = document.querySelector('.loading-animation');
+
+        // Evento que se ejecuta cuando la imagen termina de cargarse
+        image.addEventListener('load', () => {
+            // Ocultar animación de carga
+            loadingAnimation.style.display = 'none';
+            
+            // Mostrar imagen con efecto de opacidad y escala
+            image.style.opacity = '1';
+            image.style.transform = 'scale(1)';
+
+            // Mostrar texto dinámico con animación
+            dynamicText.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>

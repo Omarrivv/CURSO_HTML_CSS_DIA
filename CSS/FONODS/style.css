@@ -1,0 +1,34 @@
+body{
+    background-color: aquamarine;
+}
+
+
+.box{
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    background-color: rgba(0, 0, 0);
+    background-size: cover;
+    background-position: top;
+    /* background-repeat: no-repeat; */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb-NGEQDekk2BwsllLjk4tcIM_BPIzXECdsg&s");
+    background-attachment: fixed;
+}
+
+.opaco{
+    height: 400px;
+    width: 400px;
+    background-color: rgb(16, 15, 15,0.5);
+}
+
+h2{
+    padding: 90px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+
+
+
+
+
