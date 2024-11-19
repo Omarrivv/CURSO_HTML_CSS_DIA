@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas de Comisiones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        th, td {
+            border: 1px solid #000000;
+            color: #000000;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Comisiones</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Vendedor</th>
+                <th>Producto</th>
+                <th>Comisión (%)</th>
+                <th>Total Vendido</th>
+                <th>Comisión Ganada</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Juan Pérez</td>
+                <td>Producto A</td>
+                <td>10%</td>
+                <td>$1,000</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>María López</td>
+                <td>Producto B</td>
+                <td>15%</td>
+                <td>$2,000</td>
+                <td>$300</td>
+            </tr>
+            <!-- Agrega más filas según sea necesario -->
+        </tbody>
+    </table>
+</body>
+</html>

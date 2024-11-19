@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas Semanticas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- header es el encabezado -->
+    <header>
+        
+        <nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                &#9776;
+            </button>
+            <ul class="menu">
+                <li> <a href="#">Inicio</a></li>
+                <li> <a href="#">Acerca de</a></li>
+                <li> <a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="recipe-container">
+        <article class="recipe">
+            <h2>Receta de Pollo al Horno</h2>
+            <p>Esta es una receta de pollo al horno con ingredientes frescos y sabrosos.</p>
+        </article>
+        <article class="recipe">
+            <h2>Receta de Pastel de Chocolate</h2>
+            <p>Esta es una receta de pastel de chocolate con ingredientes frescos y sabrosos.</p>
+        </article>
+    </section>
+    <section class="comments-container">
+        <article class="comment" id="comment">
+            <p>Este es un comentario sobre la receta de pollo al horno.</p>
+        </article>
+        <article class="comment" id="comment">
+            <p>Este es un comentario sobre la receta de pastel de chocolate.</p>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 2024 Recetas de Cocina</p>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

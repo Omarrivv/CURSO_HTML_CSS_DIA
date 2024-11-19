@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#titulo-principal {
+    color: blue;
+}
+
+.titulo {
+    color: green;
+}
+
+h1 {
+    background: linear-gradient(red, orange, yellow) !important;
+    color: rgb(23, 33, 176) !important;
+}
+
+
+

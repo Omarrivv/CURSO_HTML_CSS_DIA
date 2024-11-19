@@ -1,0 +1,40 @@
+h1{
+    color: red;
+    font-family: sans-serif;
+    margin: 30px;
+}
+/*cuando pasas el mouse por encima*/
+h1:hover {
+    color: blue;
+}
+/*cuando haces click*/
+h1:active {
+    color: green;
+}
+
+/*cuando el elemento esta seleccionado*/
+h1:focus {
+    color: orange;
+    background: black;
+}
+
+/*el primer elemento hijo*/
+li:first-child{
+    color: aqua;
+}
+
+/*el ultimo elemento hijo*/
+li:last-child{
+    color: red;
+}
+
+/*el elemento n*/
+li:nth-child(2){
+    color: blue;
+}
+
+li:nth-child(3n){
+    color: green;
+}
+
+

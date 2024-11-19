@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio y Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        video {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 10px;
+        }
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 600px;
+        }
+        .controls button {
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+        }
+        .controls button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Audio y Video</h1>
+    <video id="videoPlayer" controls autoplay>
+        <source src="/AUDIO_VIDEO/video.mp4" type="video/mp4">
+        <track id="subtitleTrack" src="captions.vtt" kind="subtitles" srclang="es" label="Español" default>
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+    <div class="controls">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="muteUnmute()">Mute/Unmute</button>
+        <button onclick="restart()">Restart</button>
+        <button onclick="toggleSubtitles()">Toggle Subtitles</button>
+        <button onclick="changeSpeed()">Change Speed</button>
+    </div>
+    <script>
+        const video = document.getElementById('videoPlayer');
+        const subtitleTrack = document.getElementById('subtitleTrack');
+        let isSubtitleVisible = true;
+        let playbackSpeed = 1; // Default speed
+
+        function playPause() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+
+        function muteUnmute() {
+            video.muted = !video.muted;
+        }
+
+        function restart() {
+            video.currentTime = 0;
+            video.play();
+        }
+
+        function toggleSubtitles() {
+            isSubtitleVisible = !isSubtitleVisible;
+            subtitleTrack.mode = isSubtitleVisible ? 'showing' : 'hidden';
+        }
+
+        function changeSpeed() {
+            playbackSpeed += 0.25;
+            if (playbackSpeed > 2) {
+                playbackSpeed = 0.5; // Reset to 0.5x speed if over 2x
+            }
+            video.playbackRate = playbackSpeed;
+            alert(`Playback speed: ${playbackSpeed}x`);
+        }
+    </script>
+</body>
+</html>

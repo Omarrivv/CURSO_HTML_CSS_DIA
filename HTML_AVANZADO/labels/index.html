@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Formulario de Registro</legend>
+            <div class="form_input">
+                <label for="nombre"> Nombre</label>
+                <input type="text" placeholder="Omar" id="nombre">
+            </div>
+            <div class="form_input">
+                <label for="apellido"> Apellido</label>
+                <input type="text" placeholder="Rivera" id="apellido">
+            </div>
+            <div class="form_input">
+                <label for="pais">Pais</label>
+                <select name="pais" id="pais">
+                    <option value="mx">Mexico</option>
+                    <option value="es">España</option>
+                    <option value="us">Estados Unidos</option>
+                </select>
+            </div>
+            <div class="form_input">
+                <label for="genero">Referente</label>
+                <input type="text" list="referente" id="genero">
+                <datalist id="referente">
+                    <option value="Youtube">Youtube</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Instagram">Instagram</option>
+                </datalist>
+            </div>
+            <div class="form_textarea">
+                <label for="comentario">Comentario</label>
+                <textarea name="" id="comentario" cols="2" rows="3" placeholder="Comentario ..."></textarea>
+            </div>
+            <div class="form_input">
+                <label for="aceptar">Acepto los <a href="terminos.html">terminos y condiciones</a></label>
+                <input type="checkbox" id="aceptar">
+            </div>
+            <div class="form_button">
+                <button type="submit">Enviar</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
